@@ -1,7 +1,7 @@
 #
 # Copyright (C) 2017 The Android Open Source Project
 # Copyright (C) 2018 PitchBlack Recovery Project
-# Copyright (C) 2018-2021 OrangeFox Recovery Project
+# Copyright (C) 2018-2022 OrangeFox Recovery Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -101,6 +101,14 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # SAR
 #BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
+# version
+PLATFORM_VERSION := 16.1.0
+
+# Hack: prevent anti rollback
+PLATFORM_SECURITY_PATCH := 2099-12-31
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # OEM otacert
 PRODUCT_EXTRA_RECOVERY_KEYS += \
