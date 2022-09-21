@@ -1,0 +1,43 @@
+[
+  {
+    "repository": "vendor_xiaomi_mido"
+    "target_path": "vendor/xiaomi/mido"
+    "branch": "twelve"
+    "remote": "NRanjan-17"
+   },
+   {
+    "repository":  "android_kernel_xiaomi_mido"
+    "target_path": "kernel/xiaomi/mido"
+    "branch": "tiramisu"
+   },
+   {
+    "repository": "android_packages_modules_Bluetooth"
+    "target_path": "packages/modules/Bluetooth"
+    "branch": "tiramisu"
+    "remote": "RasyidKautsar"
+   },
+   {
+    "repository": "android_frameworks_opt_telephony"
+    "target_path": "frameworks/opt/telephony"
+    "branch": "tiramisu"
+    "remote": "RasyidKautsar"
+   },
+   {
+    "repository": "android_device_cherish_sepolicy"
+    "target_path": "device/cherish/sepolicy"
+    "branch": "tiramisu"
+    "remote": "RasyidKautsar"
+   },
+   {
+    "repository": "android_packages_apps_Contacts"
+    "target_path": "packages/apps/Contacts"
+    "branch": "tiramisu"
+    "remote": "RasyidKautsar"
+   },
+   {
+    "repository": "proton-clang"
+    "target_path": "prebuilts/clang/host/linux-x86/proton-clang"
+    "branch": "master"
+    "remote": "kdrag0n"
+   }
+]
