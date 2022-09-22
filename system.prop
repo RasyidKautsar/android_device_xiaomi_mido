@@ -8,6 +8,7 @@ vendor.fastrpc.disable.adsprpcd_sensorspd.daemon=1
 
 # Another
 persist.sys.shutdown.mode=hibernate
+persist.radio.add_power_save=1
 wifi.supplicant_scan_interval=220
 ro.ril.disable.power.collapse=1
 ro.config.hw_fast_dormancy=1
