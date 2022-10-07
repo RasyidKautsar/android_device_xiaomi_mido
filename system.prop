@@ -41,6 +41,7 @@ persist.vendor.camera.display.umax=1920x1080
 vendor.camera.lowpower.record.enable=1
 vidc.enc.dcvs.extra-buff-count=2
 persist.vendor.camera.HAL3.enabled=1
+persist.camera.CDS=off
 
 # Charger
 ro.charger.disable_init_blank=true
