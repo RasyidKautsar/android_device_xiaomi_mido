@@ -30,12 +30,12 @@ import org.lineageos.settings.preferences.FileUtils;
 
 public class VibratorStrengthPreference extends CustomSeekBarPreference {
 
-    private static int mMinVal = 116;
+    private static int mMinVal = 0;
     private static int mMaxVal = 3596;
     private static int mDefVal = mMaxVal - (mMaxVal - mMinVal) / 4;
     private Vibrator mVibrator;
 
-    private static final String FILE_LEVEL = "/sys/module/qti_haptics/parameters/vmax_mv_override";
+    private static final String FILE_LEVEL = "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv";
     private static final long[] testVibrationPattern = {0,250};
 
     public VibratorStrengthPreference(Context context, AttributeSet attrs) {

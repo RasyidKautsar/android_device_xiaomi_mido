@@ -33,7 +33,7 @@ import org.lineageos.settings.R;
 public class VibratorSettings extends PreferenceFragment {
 
     public static final String PREF_VMAX_OVERRIDE_SWITCH = "vmax_override";
-    public static final String VMAX_OVERRIDE_PATH = "/sys/module/qti_haptics/parameters/vmax_mv_override";
+    public static final String VMAX_OVERRIDE_PATH = "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override";
 
     private static TwoStatePreference mVmaxOverrideModeSwitch;
 
