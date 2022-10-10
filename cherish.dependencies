@@ -39,5 +39,11 @@
     "target_path": "prebuilts/clang/host/linux-x86/proton-clang"
     "branch": "master"
     "remote": "kdrag0n"
+   },
+   {
+    "repository": "android_vendor_qcom_opensource_data-ipa-cfg-mgr-legacy-um"
+    "target_path": "vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um"
+    "branch": "tiramisu"
+    "remote": "RasyidKautsar"
    }
 ]
