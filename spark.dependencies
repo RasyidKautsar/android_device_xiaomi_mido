@@ -2,7 +2,7 @@
   {
     "repository": "vendor_xiaomi_mido"
     "target_path": "vendor/xiaomi/mido"
-    "branch": "twelve"
+    "branch": "thirteen"
     "remote": "NRanjan-17"
    },
    {
@@ -11,27 +11,21 @@
     "branch": "tiramisu"
    },
    {
-    "repository": "android_packages_modules_Bluetooth"
+    "repository": "packages_modules_Bluetooth"
     "target_path": "packages/modules/Bluetooth"
-    "branch": "tiramisu"
+    "branch": "pyro"
     "remote": "RasyidKautsar"
    },
    {
-    "repository": "android_frameworks_opt_telephony"
-    "target_path": "frameworks/opt/telephony"
-    "branch": "tiramisu"
+    "repository": "device_qcom_sepolicy-legacy-um"
+    "target_path": "device/qcom/sepolicy-legacy-um"
+    "branch": "pyro"
     "remote": "RasyidKautsar"
    },
    {
-    "repository": "android_device_cherish_sepolicy"
-    "target_path": "device/cherish/sepolicy"
-    "branch": "tiramisu"
-    "remote": "RasyidKautsar"
-   },
-   {
-    "repository": "android_packages_apps_Contacts"
-    "target_path": "packages/apps/Contacts"
-    "branch": "tiramisu"
+    "repository": "device_spark_sepolicy"
+    "target_path": "device/spark/sepolicy"
+    "branch": "pyro"
     "remote": "RasyidKautsar"
    },
    {
