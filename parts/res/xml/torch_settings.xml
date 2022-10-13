@@ -22,7 +22,7 @@
         android:key="torch">
 
         <org.lineageos.settings.preferences.SecureSettingCustomSeekBarPreference
-            android:defaultValue="100"
+            android:defaultValue="255"
             android:key="white_torch_brightness"
             android:max="255"
             app:min="1"
@@ -30,7 +30,7 @@
             android:title="@string/white_torch_brightness_title" />
 	
         <org.lineageos.settings.preferences.SecureSettingCustomSeekBarPreference
-            android:defaultValue="100"
+            android:defaultValue="1"
             android:key="yellow_torch_brightness"
             android:max="255"
             app:min="1"

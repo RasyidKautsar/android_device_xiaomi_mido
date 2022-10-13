@@ -63,3 +63,6 @@
 # Vibrator
 /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv          u:object_r:sysfs_vibrator:s0
 /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override                             u:object_r:sysfs_vibrator:s0
+
+# FPS Info
+/sys/devices/virtual/graphics/fb0/measured_fps           u:object_r:sysfs_fps:s0

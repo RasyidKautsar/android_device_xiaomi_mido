@@ -178,9 +178,14 @@ on boot
     chmod 0660 /dev/stune/camera-daemon/tasks
 
     # Tune vm
-    write /proc/sys/vm/vfs_cache_pressure 75
     write /proc/sys/vm/user_reserve_kbytes 0
     write /proc/sys/vm/admin_reserve_kbytes 0
+
+# SmartCharging
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+    chmod 0660 /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/charging_enabled
 
 # access permission for wlan
     chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
@@ -213,14 +218,10 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     disabled
 
 on property:sys.boot_completed=1
- # write caching
-    # Tell the kernel to use up to 99% of the RAM as cache for writes
-    # and instruct kernel to use up to 50% of RAM before slowing down
-    # the process that's writing.
-    write /proc/sys/vm/dirty_ratio 99
-    write /proc/sys/vm/dirty_background_ratio 50
-
-    # Tell that 10 minutes write delay is ok to even start writing
-    # stuff on the disk (ten minutes = 60000; 1 hour 360000).
-    write /proc/sys/vm/dirty_expire_centisecs 60000
-    write /proc/sys/vm/dirty_writeback_centisecs 60000
+    write /proc/sys/vm/vfs_cache_pressure 100
+    write /proc/sys/vm/min_free_kbytes 8000
+    write /proc/sys/vm/oom_kill_allocating_task 0
+    write /proc/sys/vm/dirty_ratio 5
+    write /proc/sys/vm/dirty_background_ratio 20
+    chmod 664 /sys/module/lowmemorykiller/parameters/minfree
+    write  /sys/module/lowmemorykiller/parameters/minfree 21816,29088,36360,43632,50904,65448

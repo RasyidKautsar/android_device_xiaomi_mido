@@ -62,18 +62,18 @@ public class BootCompletedReceiver extends BroadcastReceiver implements Controll
 
         FileUtils.setValue(TorchSettings.TORCH_1_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        TorchSettings.KEY_WHITE_TORCH_BRIGHTNESS, 100));
+                        TorchSettings.KEY_WHITE_TORCH_BRIGHTNESS, 255));
         FileUtils.setValue(TorchSettings.TORCH_2_BRIGHTNESS_PATH,
                 Settings.Secure.getInt(context.getContentResolver(),
-                        TorchSettings.KEY_YELLOW_TORCH_BRIGHTNESS, 100));
+                        TorchSettings.KEY_YELLOW_TORCH_BRIGHTNESS, 1));
 
         int gain = Settings.Secure.getInt(context.getContentResolver(),
-                SoundControlSettings.PREF_HEADPHONE_GAIN, 4);
+                SoundControlSettings.PREF_HEADPHONE_GAIN, 0);
         FileUtils.setValue(SoundControlSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
         FileUtils.setValue(SoundControlSettings.MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                SoundControlSettings.PREF_MICROPHONE_GAIN, 0));
+                SoundControlSettings.PREF_MICROPHONE_GAIN, 7));
         FileUtils.setValue(SoundControlSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                SoundControlSettings.PREF_SPEAKER_GAIN, 0));
+                SoundControlSettings.PREF_SPEAKER_GAIN, 5));
 
         boolean enabled = false;
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
