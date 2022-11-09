@@ -2,23 +2,17 @@
   {
     "repository": "vendor_xiaomi_mido"
     "target_path": "vendor/xiaomi/mido"
-    "branch": "twelve"
+    "branch": "thirteen"
     "remote": "NRanjan-17"
    },
    {
-    "repository":  "android_kernel_xiaomi_mido"
+    "repository":  "kernel_xiaomi_mido-4.9"
     "target_path": "kernel/xiaomi/mido"
     "branch": "tiramisu"
    },
    {
     "repository": "android_packages_modules_Bluetooth"
     "target_path": "packages/modules/Bluetooth"
-    "branch": "tiramisu"
-    "remote": "RasyidKautsar"
-   },
-   {
-    "repository": "android_frameworks_opt_telephony"
-    "target_path": "frameworks/opt/telephony"
     "branch": "tiramisu"
     "remote": "RasyidKautsar"
    },
