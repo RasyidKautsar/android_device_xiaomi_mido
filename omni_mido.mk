@@ -1,7 +1,7 @@
 # Only the below variable(s) need to be changed!
 #
 # Define hardware platform
-PRODUCT_PLATFORM := sdm450
+# PRODUCT_PLATFORM := sdm450
 
 # Release name
 PRODUCT_RELEASE_NAME := mido
