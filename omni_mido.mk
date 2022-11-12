@@ -17,7 +17,7 @@ $(call inherit-product, vendor/pb/config/common.mk)
 MAINTAINER := "Rsyd @RasyidKautsar"
 PB_DISABLE_DEFAULT_DM_VERITY := true
 PB_DISABLE_DEFAULT_TREBLE_COMP := true
-PB_TORCH_PATH := /sys/class/leds/led:torch_0
+PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
