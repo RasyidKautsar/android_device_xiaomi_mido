@@ -20,7 +20,12 @@ PRODUCT_RELEASE_NAME := mido
 $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
+
+# PBRP Stuff
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=msm8953

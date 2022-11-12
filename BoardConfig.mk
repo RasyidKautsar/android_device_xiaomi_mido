@@ -39,27 +39,23 @@ TARGET_BOARD_SUFFIX := _64
 TARGET_BOOTLOADER_BOARD_NAME := MSM8953
 TARGET_NO_BOOTLOADER := true
 
-# Crypto
+# Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
 TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_RESETPROP := true
+TW_USE_FSCRYPT_POLICY := 1
+PRODUCT_ENFORCE_VINTF_MANIFEST := true
+BOARD_USES_QCOM_FBE_DECRYPTION := true
 
 # Kernel
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 androidboot.selinux=permissive
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_PAGESIZE :=  2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-
-ifeq ($(FOX_BUILD_FULL_KERNEL_SOURCES),1)
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_CONFIG := mido-fox_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mido
-else
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_RAMDISK_OFFSET := 0x01000000
+TARGET_KERNEL_VERSION := 4.9
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
-PRODUCT_COPY_FILES += \
-    $(TARGET_PREBUILT_KERNEL):kernel
-endif
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
@@ -77,10 +73,11 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # TWRP Configuration
+TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 TW_THEME := portrait_hdpi
 TW_INCLUDE_NTFS_3G := true
 TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 145
+TW_DEFAULT_BRIGHTNESS := 117
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_SCREEN_BLANK_ON_BOOT := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -95,12 +92,16 @@ TW_EXTRA_LANGUAGES := true
 ALLOW_MISSING_DEPENDENCIES := true
 AB_OTA_UPDATER := false
 TARGET_USES_LOGD := true
+TW_HAS_EDL_MODE := true
+TW_EXCLUDE_TWRPAPP := true
+TW_NO_USB_STORAGE := true
+
 # Treble
 BOARD_NEEDS_VENDORIMAGE_SYMLINK := false
 TARGET_COPY_OUT_VENDOR := vendor
 
 # SAR
-#BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # version
 PLATFORM_VERSION := 16.1.0
@@ -109,8 +110,3 @@ PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-
-# OEM otacert
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    vendor/recovery/security/miui
-#
