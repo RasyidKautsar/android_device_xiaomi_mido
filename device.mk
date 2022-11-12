@@ -25,16 +25,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# Overrides
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=mido \
-    PRODUCT_NAME=$(PRODUCT_RELEASE_NAME) \
-    TARGET_DEVICE=mido
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.product=mido
-
-# Blacklist
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-    ro.bootimage.build.date.utc \
-    ro.build.date.utc
