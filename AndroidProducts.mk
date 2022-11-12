@@ -16,7 +16,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_mido.mk
+    $(LOCAL_DIR)/omni_mido.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_mido-eng
+    omni_mido-eng
