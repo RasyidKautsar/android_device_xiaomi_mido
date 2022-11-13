@@ -1,3 +1,4 @@
 ro.crypto.volume.filenames_mode=aes-256-cts
-ro.product.device=mido
-ro.build.product=mido
+ro.product.board=MSM8953
+ro.board.platform=msm8953
+ro.product.vendor.model=Redmi Note 4
